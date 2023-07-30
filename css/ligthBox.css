@@ -1,0 +1,40 @@
+
+
+.open {
+    display: flex;
+}
+.lightbox{
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+.lightbox .lightbox_container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 95%;
+        min-width: 95%;
+        border: solid 2px #901C1C;
+        margin: 0 auto;
+}
+
+.lightbox .lightbox_container .media_container{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.media_container .mediaLightBox {
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 100px);
+    border-radius: 5px;
+}

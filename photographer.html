@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" crossorigin>
+    <title>Fisheye - photographe </title>
+</head>
+<body>
+<header>
+    <a href="index.html" aria-label="Retour sur la page d'accueil" >
+        <img src="./assets/images/logo.png" class="logo" alt="logo" id="logoSite"/>
+    </a>
+</header>
+
+<main id="main">
+    <div class="photograph-header">
+    </div>
+    <div class="select">
+        <label aria-label="Trier par">
+            Trier Par
+            <select name="trieur" id="trieur">
+                <option value="sortLikes" id="sortLikes" aria-label="Popularité">Popularité
+                </option>
+                <option value="sortTitles" id="sortTitles" aria-label="Titres">Titres
+                </option>
+                <option value="sortDates" id="sortDates" aria-label="Dates">Dates
+                </option>
+            </select>
+        </label>
+    </div>
+
+    <div class="photograph-media"></div>
+    <div class="photograph-overlay">
+        <div class="counterLike">
+            <p id="display-count">0</p>
+            <img src="./assets/icons/iconmonstr-heart-filled.svg"
+                 class="logo_overlay" alt="coeur">
+        </div>
+        <div id="price"></div>
+    </div>
+</main>
+<div id="modal_contact" class="contactbox">
+    <div class="modal">
+        <header class="modal_header">
+            <div class="modal_header_content">
+                    <p id="title_contact">Contactez-moi</p>
+                    <p id="name_contact"></p>
+                </div>
+                <div class="closeContact">
+                    <svg width="82" height="82" viewBox="0 0 24 24"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 18L18 6M6 6L18 18"
+                              stroke='#FFFFFF' stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </header>
+            <form id="form_contact">
+                <div>
+                    <label for="prenom">Prénom</label>
+                    <input name="prenom" type="text" id="prenom">
+                    <span id="prenom-error" class="styleError"></span>
+                </div>
+                <div>
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" id="nom">
+                    <span id="nom-error" class="styleError"></span>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <span id="email-error" class="styleError"></span>
+                </div>
+                <div>
+                    <label for="message">Votre message</label>
+                    <textarea name="message" id="message" cols="30"
+                              rows="10"></textarea>
+                    <span id="message-error" class="styleError"></span>
+                </div>
+                <button class="contact_button">Envoyer</button>
+            </form>
+        </div>
+    
+</div>
+
+<div id="modal_lightbox" class="lightbox">
+    <div class="lightbox_container">
+        <div class="media_container">
+            <div class="media_img_video">
+                <img src="" alt="" class="mediaLightBox"/>
+                <video source="" alt="" class="mediaLightBox" id="videoLightBox"
+                       controls></video>
+                <div class="media_container_title">titre</div>
+            </div>
+
+        </div>
+
+        <div class="prevMedia">
+            <svg width='50' height='45' viewBox="0 0 24 24"
+                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 19L8 12L15 5" stroke='#901C1C'
+                      stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <div class="nextMedia">
+            <svg width='50' height='45' viewBox="0 0 24 24"
+                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5L16 12L9 19" stroke='#901C1C'
+                      stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <div class="closeMedia">
+            <svg width="42" height="42" viewBox="0 0 24 24"
+                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6L18 18" stroke='#901C1C'
+                      stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<script src="./scripts/pages/photographer.js" type="module"></script>
+</body>
+</html>
